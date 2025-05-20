@@ -1,112 +1,164 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
-    <meta charset="utf-8">
-    <title>Shemet Yahor</title>
-    <style>
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            height: 100vh;
-        }
-        .column {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 1.25rem;
-        }
-        .column button {
-            background-color: purple;
-            color: white;
-            border: none;
-            padding: .625rem 1.25rem;
-            margin: .3125rem;
-            cursor: pointer;
-        }
-        .column .small-button {
-            padding: .3125rem .625rem;
-        }
-        .header-text {
-            text-align: center;
-            color: purple;
-            font-size: 50px;
-            margin-top: 1.25rem;
-        }
-        .source-code {
-            white-space: pre-wrap;
-            text-align: left;
-            margin: 1.25rem;
-            padding: .625rem;
-            border: .0625rem solid #ccc;
-            background-color: #f9f9f9;
-            max-height: 25rem;
-            overflow-y: auto;
-        }
-    </style>
-    <script language="JavaScript">
-        let windows = [];
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maksim Medusheuski 3G – Zaliczenie JS</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
 
-        function openWindow(url, name) {
-            // Sprawdzamy, czy okno już jest otwarte, jeśli tak - zamykamy je
-            let existingWindow = windows[name];
-            if (existingWindow && !existingWindow.closed) {
-                existingWindow.close();
-            }
+    header {
+      background: #4a90e2;
+      padding: 20px;
+      color: white;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
 
-            // Otwieramy nowe okno
-            let newWindow = window.open(url, name, "toolbar=no,directories=no,height=380,width=380,top=200,left=500");
-            
-            // Dodajemy okno do tablicy
-            windows[name] = newWindow;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
 
-        function fetchSource(url, elementId) {
-            fetch(url)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(elementId).innerText = data;
-                })
-                .catch(error => {
-                    document.getElementById(elementId).innerText = `Błąd ładowania: ${error.message}`;
-                });
-        }
-    </script>
+    .section {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .section h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #4a90e2;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      background: #4a90e2;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #357ab8;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #777;
+    }
+  </style>
+  <script>
+    function WinOpen(url, name) {
+      window.open(url, name, "toolbar=no,directories=no,height=600,width=600,top=200,left=500");
+    }
+
+    function okno_zamknij() {
+      window.close();
+    }
+  </script>
 </head>
 <body>
-    <h1 class="header-text">Szkielet zaliczeniowy JavaScript wykonał: Yahor Shemet 3g</h1>
-    <div class="container">
-        <div class="column">
-     
-            <button onclick="openWindow('zad28_med.html', 'okienko')">Otwórz z28</button>
-            <button onclick="openWindow('z29_shem.html', 'okienko')">Otwórz z29</button>
-            <button onclick="openWindow('z30_shem.html', 'okienko')">Otwórz z30</button>
-            <button onclick="openWindow('z31_shem.html', 'okienko')">Otwórz z31</button>
-            <button onclick="openWindow('z32_shem.html', 'okienko')">Otwórz z32</button>
-            <button onclick="openWindow('z35_shem.html', 'okienko')">Otwórz z35</button>
-            <button onclick="openWindow('z36_shem.html', 'okienko')">Otwórz z36</button>
-            <button onclick="openWindow('z37_shem.html', 'okienko')">Otwórz z37</button>
-            <button onclick="openWindow('z38_shem.html', 'okienko')">Otwórz z38</button>
-            <button onclick="openWindow('z39_shem.html', 'okienko')">Otwórz z39</button>
-            <button onclick="openWindow('z40_shem.html', 'okienko')">Otwórz z40</button>
+  <header>
+    <h1>Zaliczenie JavaScript – Maksim Medusheuski 3G</h1>
+  </header>
 
-        </div>
-        <div class="column">
-     
-            <button class="small-button" onclick="fetchSource('zad28_med.html', 'source')">Zobacz kod z28</button>
-            <button class="small-button" onclick="fetchSource('z29_shem.html', 'source')">Zobacz kod z29</button>
-            <button class="small-button" onclick="fetchSource('z30_shem.html', 'source')">Zobacz kod z30</button>
-            <button class="small-button" onclick="fetchSource('z31_shem.html', 'source')">Zobacz kod z31</button>
-            <button class="small-button" onclick="fetchSource('z32_shem.html', 'source')">Zobacz kod z32</button>
-            <button class="small-button" onclick="fetchSource('z35_shem.html', 'source')">Zobacz kod z35</button>
-            <button class="small-button" onclick="fetchSource('z36_shem.html', 'source')">Zobacz kod z36</button>
-            <button class="small-button" onclick="fetchSource('z37_shem.html', 'source')">Zobacz kod z37</button>
-            <button class="small-button" onclick="fetchSource('z38_shem.html', 'source')">Zobacz kod z38</button>
-            <button class="small-button" onclick="fetchSource('z39_shem.html', 'source')">Zobacz kod z39</button>
-            <button class="small-button" onclick="fetchSource('z40_shem.html', 'source')">Zobacz kod z40</button>
-
-            <pre id="source" class="source-code"></pre>
-        </div>
+  <div class="section">
+    <h2>Zadania 1–16</h2>
+    <div class="buttons">
+      <button onclick="WinOpen('z1_medusheuski.html','z1')">Zadanie 1</button>
+      <button onclick="WinOpen('z2_medusheuski.html','z2')">Zadanie 2</button>
+      <button onclick="WinOpen('z3_medusheuski.html','z3')">Zadanie 3</button>
+      <button onclick="WinOpen('z4_medusheuski.html','z4')">Zadanie 4</button>
+      <button onclick="WinOpen('z5_medusheuski.html','z5')">Zadanie 5</button>
+      <button onclick="WinOpen('z7_medusheuski.html','z7')">Zadanie 7</button>
+      <button onclick="WinOpen('z8_medusheuski.html','z8')">Zadanie 8</button>
+      <button onclick="WinOpen('z9_medusheuski.html','z9')">Zadanie 9</button>
+      <button onclick="WinOpen('z10_medusheuski.html','z10')">Zadanie 10</button>
+      <button onclick="WinOpen('z11_medusheuski.html','z11')">Zadanie 11</button>
+      <button onclick="WinOpen('z12_medusheuski.html','z12')">Zadanie 12</button>
+      <button onclick="WinOpen('z13_medusheuski.html','z13')">Zadanie 13</button>
+      <button onclick="WinOpen('z14_medusheuski.html','z14')">Zadanie 14</button>
+      <button onclick="WinOpen('z15_medusheuski.html','z15')">Zadanie 15</button>
+      <button onclick="WinOpen('z16_medusheuski.html','z16')">Zadanie 16</button>
     </div>
+  </div>
+
+  <div class="section">
+    <h2>Zadania 17–21</h2>
+    <div class="buttons">
+      <button onclick="WinOpen('medu_17.html','z17')">Zadanie 17</button>
+      <button onclick="WinOpen('medu_18.html','z18')">Zadanie 18</button>
+      <button onclick="WinOpen('medu_18_kod.html','z18_kod')">Zadanie 18 kod</button>
+      <button onclick="WinOpen('medu_19.html','z19')">Zadanie 19</button>
+      <button onclick="WinOpen('medu_19_kod.html','z19_kod')">Zadanie 19 kod</button>
+      <button onclick="WinOpen('medu_20.html','z20')">Zadanie 20</button>
+      <button onclick="WinOpen('medu_20_kod.html','z20_kod')">Zadanie 20 kod</button>
+      <button onclick="WinOpen('medu_21.html','z21')">Zadanie 21</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Zadania 28–32</h2>
+    <div class="buttons">
+      <button onclick="WinOpen('zad28_med.html','z28')">Zadanie 28</button>
+      <button onclick="WinOpen('zad8_kod.html','z28_kod')">Zadanie 28 kod</button>
+      <button onclick="WinOpen('zad29_med.html','z29')">Zadanie 29</button>
+      <button onclick="WinOpen('zad29_kod.html','z29_kod')">Zadanie 29 kod</button>
+      <button onclick="WinOpen('zad30_med.html','z30')">Zadanie 30</button>
+      <button onclick="WinOpen('zad30_kod.html','z30_kod')">Zadanie 30 kod</button>
+      <button onclick="WinOpen('zad31_med.html','z31')">Zadanie 31</button>
+      <button onclick="WinOpen('zad31_kod.html','z31_kod')">Zadanie 31 kod</button>
+      <button onclick="WinOpen('zad32_med.html','z32')">Zadanie 32</button>
+      <button onclick="WinOpen('zad32_kod.html','z32_kod')">Zadanie 32 kod</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Zadania 35–40</h2>
+    <div class="buttons">
+      <button onclick="WinOpen('z35_med.html','z35')">Zadanie 35</button>
+      <button onclick="WinOpen('zad36_med.html','z36')">Zadanie 36</button>
+      <button onclick="WinOpen('zad37_med.html','z37')">Zadanie 37</button>
+      <button onclick="WinOpen('zad38_med.html','z38')">Zadanie 38</button>
+      <button onclick="WinOpen('zad39_med.html','z39')">Zadanie 39</button>
+      <button onclick="WinOpen('zad40_med.html','z40')">Zadanie 40</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Inne</h2>
+    <div class="buttons">
+      <button onclick="WinOpen('obraz.html','obraz')">Obraz</button>
+      <button onclick="okno_zamknij()">Zamknij</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Maksim Medusheuski, klasa 3G
+  </footer>
 </body>
 </html>
+
