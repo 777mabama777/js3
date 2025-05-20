@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 40</title>
+</head>
+<body>
+    <h2>Operacje matematyczne</h2>
+    <input type="button" name="zadanie40" value="Oblicz roznice" onclick="roznica_med()" />
+    <input type="button" name="zadanie40" value="Oblicz iloczyn" onclick="iloczyn_med()" />
+    
+    <script>
+        function roznica_med() {
+            var a = parseFloat(prompt("Podaj pierwsza liczbe:", ""));
+            var b = parseFloat(prompt("Podaj druga liczbe:", ""));
+            var wynik = a - b;
+            document.write('<p style="color: green; font-size: 4;">Roznica wynosi: ' + wynik + '</p>');
+        }
+
+        function iloczyn_med() {
+            var a = parseFloat(prompt("Podaj pierwsza liczbe:", ""));
+            var b = parseFloat(prompt("Podaj druga liczbe:", ""));
+            var wynik = a * b;
+            document.write('<p style="color: blue; font-size: 4;">Iloczyn wynosi: ' + wynik + '</p>');
+        }
+    </script>
+</body>
+</html>

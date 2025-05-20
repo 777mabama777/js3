@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 37</title>
+</head>
+<body>
+    <h2>Zadanie 37: Sprawdz przedzial liczbowy</h2>
+    <input type="button" name="zadanie37" value="Sprawdź przedzial" onclick="zadanie37()" />
+    
+    <script>
+        function zadanie37() {
+            var x = parseFloat(prompt("Podaj liczbe:", ""));
+            if ((x >= -2 && x < 3) || x > 5) {
+                document.write('<p style="color: green; font-size: 4;">Liczba nalezy do przedzialu</p>');
+            } else {
+                document.write('<p style="color: red; font-size: 4;">Liczba nie nalzży do przedzialu</p>');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 36</title>
+</head>
+<body>
+    <h1 style="color: green;">MENU:</h1>
+    <p style="color: green;">1 - zielony</p>
+    <p style="color: red;">2 - czerwony</p>
+    <input type="button" name="zadanie36" value="Oblicz" onclick="zadanie36()" />
+    
+    <script>
+        function zadanie36() {
+            var x = prompt("Podaj kolor (1, 2, zielony, czerwony):", "").toLowerCase();
+
+            if (x == "1" || x == "zielony") {
+                document.write('<h1 style="color: green; font-size: 7;">Wczytałeś kolor zielony</h1><br />');
+            } else if (x == "2" || x == "czerwony") {
+                document.write('<h6 style="color: red; font-size: 1;">Wczytałeś kolor czerwony</h6><br />');
+            } else {
+                document.write('<p style="color: black; font-size: 3;">Nieprawidłowy wybór!</p>');
+            }
+        }
+    </script>
+</body>
+</html>
