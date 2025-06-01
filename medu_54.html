@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Prostokąt z gwiazdek</title>
+</head>
+<body>
+
+<script>
+    
+    var imie = prompt("Podaj imię:");
+    var nazwisko = prompt("Podaj nazwisko:");
+
+   
+    var a = (nazwisko.length % 4) + 5;
+    var b = (imie.length % 6) + 20;
+
+   
+    for (var i = 0; i < b; i++) {
+        document.write("*");
+    }
+    document.write("<br>");
+
+  
+    var srodek = "*";
+    for (var j = 1; j <= b - 2; j++) {
+        srodek += "&nbsp&nbsp"; 
+    }
+    srodek += "*";
+
+    for (var i = 0; i < a - 2; i++) {
+        document.write(srodek + "<br>");
+    }
+
+  
+    for (var i = 0; i < b; i++) {
+        document.write("*");
+    }
+</script>
+
+</body>
+</html>
