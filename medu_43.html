@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Wyświetlanie z prompt</title>
+</head>
+<body>
+  <div style="color:red; font-size:50px;">
+    <script>
+   
+      let koniec_petli_med = prompt("Podaj liczbę, ile razy chcesz wyświetlić komunikat:");
+
+     
+      koniec_petli_med = parseInt(koniec_petli_med);
+
+      for (let i_med = 1; i_med <= koniec_petli_med; i_med++) {
+        document.write("Wyświetlam " + i_med + " raz - Med<br>");
+      }
+    </script>
+  </div>
+</body>
+</html>
