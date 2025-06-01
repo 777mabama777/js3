@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Sprawdzanie trójkąta – Medusheuski</title>
+</head>
+<body>
+  <div style="color:blue; font-size:30px;">
+    <script>
+      let a_med, b_med, c_med;
+
+      do {
+        a_med = parseFloat(prompt("Podaj bok a:"));
+        b_med = parseFloat(prompt("Podaj bok b:"));
+        c_med = parseFloat(prompt("Podaj bok c:"));
+      } while (
+        !(a_med > 0 && b_med > 0 && c_med > 0 &&
+          a_med + b_med > c_med &&
+          a_med + c_med > b_med &&
+          b_med + c_med > a_med)
+      );
+
+      document.write("Trójkąt o bokach a = " + a_med + ", b = " + b_med + ", c = " + c_med + " istnieje.");
+    </script>
+  </div>
+</body>
+</html>
