@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kod zadania  Medusheuski</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<textarea rows="65" cols="100">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Wyświetlanie imienia lub nazwiska</title>
+</head>
+<body>
+  <script>
+    
+    const nazwisko = "Medusheuski";
+    const imie = "Maksim";
+
+  
+    const liczba_liter_nazwiska = nazwisko.length;
+    const ilosc_wykonan_petli_med = (liczba_liter_nazwiska % 4) + 10;  // = 13
+    const wielkosc_liter_med = (liczba_liter_nazwiska % 3) + 40;       // = 42
+
+   
+    let liczba_wpisana_med = prompt("Podaj liczbę:");
+
+   
+    liczba_wpisana_med = parseInt(liczba_wpisana_med);
+
+  
+    document.write("<div style='font-size:20px; color:black;'>");
+    document.write("Ilość wykonania pętli = " + ilosc_wykonan_petli_med + "<br>");
+    document.write("Wielkość liter = " + wielkosc_liter_med + "px<br><br>");
+    document.write("</div>");
+
+ 
+    if (liczba_wpisana_med % 2 === 0) {
+      // Liczba parzysta — wyświetlamy nazwisko, kolor niebieski
+      document.write("<div style='color:blue; font-size:" + wielkosc_liter_med + "px;'>");
+      for (let i_med = 1; i_med <= ilosc_wykonan_petli_med; i_med++) {
+        document.write(i_med + ": " + nazwisko + "<br>");
+      }
+      document.write("</div>");
+    } else {
+     
+      document.write("<div style='color:green; font-size:" + wielkosc_liter_med + "px;'>");
+      for (let i_med = 1; i_med <= ilosc_wykonan_petli_med; i_med++) {
+        document.write(i_med + ": " + imie + "<br>");
+      }
+      document.write("</div>");
+    }
+  </script>
+</body>
+</html>
+</textarea>
+</body>
+</html>
