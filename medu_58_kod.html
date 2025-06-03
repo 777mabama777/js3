@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kod zadania  Medusheuski</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<textarea rows="65" cols="100">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Wypisywanie nieparzystych liczb</title>
+</head>
+<body>
+
+<script>
+  
+    let liczba1 = parseInt(prompt("Podaj pierwszą liczbę:"));
+    let liczba2 = parseInt(prompt("Podaj drugą liczbę:"));
+
+   
+    if (liczba1 === liczba2) {
+        confirm("Liczby są równe – brak obliczeń.");
+    } else {
+        let start, end, color, fontSize;
+
+        
+        if (liczba1 < liczba2) {
+            start = liczba1;
+            end = liczba2;
+            color = "green";
+            fontSize = "24px";
+            for (let i = start; i <= end; i++) {
+                if (i % 2 !== 0) {
+                    document.write("<p style='color:" + color + "; font-size:" + fontSize + ";'>" + i + "</p>");
+                }
+            }
+        }
+
+      
+        else {
+            start = liczba1;
+            end = liczba2;
+            color = "blue";
+            fontSize = "12px";
+            for (let i = start; i >= end; i--) {
+                if (i % 2 !== 0) {
+                    document.write("<p style='color:" + color + "; font-size:" + fontSize + ";'>" + i + "</p>");
+                }
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
+</textarea>
+</body>
+</html>
