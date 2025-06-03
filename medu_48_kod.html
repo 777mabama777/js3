@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kod zadania  Medusheuski</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<textarea rows="65" cols="100">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Szereg harmoniczny – Medusheuski</title>
+</head>
+<body>
+  <div style="color:green; font-size:20px;">
+    <script>
+      let suma_med = 0;
+      let i_med = 1;
+
+      while (i_med <= 1000000) {
+        suma_med = suma_med + 1 / i_med;
+        i_med++;
+      }
+
+      document.write("Suma szeregu harmonicznego od 1 do 1 000 000 = " + suma_med.toFixed(6));
+    </script>
+  </div>
+</body>
+</html>
+</textarea>
+</body>
+</html>
