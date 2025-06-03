@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kod zadania  Medusheuski</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<textarea rows="65" cols="100">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title> Modyfikacja zadania 50 – Medusheuski </title>
+</head>
+<body>
+  <div style="font-size:2cm; color:red;">
+    Medusheuski
+  </div>
+  <div style="font-size:5mm; color:blue;">
+    Temat: Pętla z inicjałami i powtarzaniem tekstu
+  </div>
+
+  <script>
+    let ile_razy = parseInt(prompt("Ile razy powtórzyć napis?", ""));
+    let tekst = prompt("Podaj tekst (np. Twoje inicjały):", "");
+
+    for (let i_med = 1; i_med <= ile_razy; i_med++) {
+      for (let k_med = 1; k_med <= i_med; k_med++) {
+        document.write("&nbsp;");
+      }
+      document.write(i_med + "_" + tekst + "_" + i_med + "<br>");
+    }
+  </script>
+</body>
+</html>
+</textarea>
+</body>
+</html>
