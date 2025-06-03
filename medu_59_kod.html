@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kod zadania  Medusheuski</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<textarea rows="65" cols="100">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Punkty kratowe w kole</title>
+</head>
+<body>
+
+<script>
+   
+    let R_med = parseFloat(prompt("Podaj promień koła (R):"));
+
+  
+    let licznik_med = 0;
+
+   
+    let granica_med = Math.floor(R_med) + 1;
+
+  
+    for (let i_med = -granica_med; i_med <= granica_med; i_med++) {
+        for (let j_med = -granica_med; j_med <= granica_med; j_med++) {
+           
+            if ((i_med * i_med + j_med * j_med) <= R_med * R_med) {
+                licznik_med++;
+            }
+        }
+    }
+
+ 
+    document.write("Dla promienia R = " + R_med + "<br>");
+    document.write("Liczba punktów kratowych N(R) = " + licznik_med);
+</script>
+
+</body>
+</html>
+</textarea>
+</body>
+</html>
