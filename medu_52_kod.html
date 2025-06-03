@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kod zadania  Medusheuski</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<textarea rows="65" cols="100">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Rysowanie prostokąta - Medusheuski</title>
+  <style>
+    pre {
+      font-family: monospace;
+      font-size: 16px;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div style="font-size:2cm; color:red;">
+  Medusheuski
+</div>
+<div style="font-size:5mm; color:blue;">
+  Temat: Użycie pętli for do rysowania prostokąta z gwiazdek
+</div>
+
+<pre>
+<script>
+ 
+  let a_med = (12 % 4) + 5; //  medusheuski -> 12 liter -> a = 5
+  let b_med = (6 % 6) + 20; //  maksim -> 6 liter -> b = 20
+
+  
+  for (let i_med = 1; i_med <= b_med; i_med++) {
+    document.write("*");
+  }
+  document.write("<br>");
+
+
+  for (let j_med = 1; j_med <= a_med - 2; j_med++) {
+    document.write("*");
+    for (let k_med = 1; k_med <= b_med - 2; k_med++) {
+      document.write("&nbsp;");
+    }
+    document.write("*<br>");
+  }
+
+
+  for (let i_med = 1; i_med <= b_med; i_med++) {
+    document.write("*");
+  }
+</script>
+</pre>
+
+</body>
+</html>
+</textarea>
+</body>
+</html>
