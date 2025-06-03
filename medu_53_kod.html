@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kod zadania  Medusheuski</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<textarea rows="65" cols="100">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Rysowanie prostokąta z gwiazdek</title>
+</head>
+<body>
+
+<script>
+   
+    var a_med = parseInt(prompt("Podaj wysokość prostokąta (a):"));
+    var b_med = parseInt(prompt("Podaj szerokość prostokąta (b):"));
+
+   
+    for (var i = 0; i < b_med; i++) {
+        document.write("*");
+    }
+    document.write("<br>");
+
+  
+    var wiersz_med = "*";
+    for (var i = 1; i <= (b_med - 2); i++) {
+        wiersz_med = wiersz_med + "&nbsp&nbsp"; 
+    }
+    wiersz_med = wiersz_med + "*";
+
+   
+    for (var i = 0; i < (a_med - 2); i++) {
+        document.write(wiersz_med + "<br>");
+    }
+
+  
+    for (var i = 0; i < b_med; i++) {
+        document.write("*");
+    }
+</script>
+
+</body>
+</html>
+</textarea>
+</body>
+</html>
